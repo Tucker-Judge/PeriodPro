@@ -1,5 +1,5 @@
 {
-    "reusable products": [
+    "reusable-products": [
         {
             "id": 1,
             "name": "The Period Company High-Waisted Light Flow Underwear",
@@ -81,7 +81,7 @@
         
     
     ],
-    "disposable products": [
+    "disposable-products": [
      
         {
             "name": " o.b.® PRO COMFORT® Super",
@@ -125,7 +125,7 @@
             "description": "Always Thin No Feel Protection Daily Liners Regular are designed for discreet protection against daily discharge and odors. These pantiliners are made to be thin and absorbent for everyday freshness.",
             "price": "$7",
             "image": "https://images.ctfassets.net/o5hnyn1x0ewo/2jfK2qoBu1NVMZlZgSglvf/842534d24175d59196d660648339f2ed/Always-Thin-Pads-Unscented-ct-20.jpg",
-            "url": "https://www.always.com/en-us/shop-products/daily-liners/thin-liners/always-thin-dailies",
+            "url": "https://www.always.com/en-us/shop-products/daily-liners/thin-liners/always-thin-dailies"
         },
         {
             "name": "Flex disc",
@@ -136,7 +136,7 @@
             "description": "Flex Disc is a disposable menstrual product designed to give you the most liberating period of your life. It sits high in the vaginal fornix—where comfort is prioritized and sex is never off limits.",
             "price": "$12",
             "image": "https://images.ctfassets.net/qdyi7eiew2j6/5q6nu4gZa5nBOiZ0SyKFVO/d616e848fceef8996d0fc0ec8be718f8/image_1.jpg",
-            "url": "https://flexfits.com/pages/shop-flex-disc?gclid=Cj0KCQiAyracBhDoARIsACGFcS5ZgXfw1SMBGeDFmykZsZ0lYdyojWNfMm1DfNo0H5_Dat9_7cGgh4QaAh4bEALw_wcB",
+            "url": "https://flexfits.com/pages/shop-flex-disc?gclid=Cj0KCQiAyracBhDoARIsACGFcS5ZgXfw1SMBGeDFmykZsZ0lYdyojWNfMm1DfNo0H5_Dat9_7cGgh4QaAh4bEALw_wcB"
 
         },
         {
