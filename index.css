@@ -82,3 +82,35 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+
+button {
+    background-color: #B8324F;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px
+}
+
+#detail-desc{
+    width: 400px;
+    text-align:center;
+}
+
+#detail-image{
+    
+    height:200px 
+}
+
+#detail-name{
+
+}
+
+.detail-box{
+    text-align: center;
+}
