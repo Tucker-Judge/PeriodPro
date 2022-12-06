@@ -150,5 +150,38 @@
             "image": "https://cdn.shopify.com/s/files/1/0072/0440/5305/products/71C1QRmNL8L._SL1500_1946x.jpg?v=1548651808",
             "url": "https://www.target.com/p/softdisc-menstrual-discs-14ct/-/A-75003204"
         }
+    ],
+ 
+    "product-type":[
+        {
+            "name": "Tampon",
+            "description": "A tampon is a menstrual product designed to absorb blood and vaginal secretions by insertion into the vagina during menstruation.",
+            "image": "https://images.ctfassets.net/jtv5bdl5335w/2ZGVU078kR97SA0uLagWCG/5fb6a89ef851278fdaf26d964a877406/Tampax_UK_EN_Product_20listing_Tampax_Tampon_900x440.jpg?w=710"
+        },
+        {
+            "name": "Pads",
+            "description": "A menstrual pad is a type of menstrual hygiene product that is worn externally. Pads are generally changed by being stripped off the pants and panties, taking out the old pad, sticking the new one on the inside of the panties and pulling them back on.",
+            "image": "https://images.squarespace-cdn.com/content/v1/61dcd32b3fb8bb4b5af9b560/1643392699662-E8SVEUKZJHSLSMG0QXFK/organic-pads.jpeg"
+        },
+        {
+            "name": "Mentrual Disc",
+            "description": "A menstrual disc is an insertable alternative period product that is supposed to provide 12 hours of protection, let you have mess-free sex on your period, and even help minimize cramps.",
+            "image": "https://helios-i.mashable.com/imagery/articles/077v8ftgmIHHHPi7WWpl6QT/hero-image.fill.size_1200x1200.v1623391935.jpg"
+        },
+        {
+            "name": "Menstrual Cup",
+            "description": " A menstrual cup is a type of reusable feminine hygiene product. It is a small, flexible funnel-shaped cup made of rubber or silicone that you insert into your vagina to catch and collect period fluid. Many women use them as an eco-friendly alternative to tampons. Depending on your flow, you can wear a cup for up to 12 hours.",
+            "image": "https://post.healthline.com/wp-content/uploads/2020/08/3676-menstrual_cup_732x549-thumb.jpg"
+        },
+        {
+            "name": "Period Panties",
+            "description": "These absorbent underpants have multiple layers of microfiber polyester. They look like regular underwear, but they’re designed to keep moisture away from your skin as they soak up menstrual blood.",
+            "image": "https://www.byrdie.com/thmb/T3kc9183gvMWm3qVmksm8Bi0Mgo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BYRDIE-11-best-period-underwear-4769219-primary-b4bf3802e87144dbb15053c41eec10ab.jpg"
+        },
+        {
+            "name": "Reusable Pads",
+            "description": "Reusable pads are made from cloth and are worn in the underwear to collect menstrual fluid. They are an alternative to sanitary napkins or to menstrual cups. Because they can be reused, they are generally less expensive than disposable pads over time, and reduce the amount of waste produced.",
+            "image": "https://cdn.shopify.com/s/files/1/0264/7418/4790/products/Myproject_8_e_1500x.jpg?v=1652819990"
+        }
     ]
 }
