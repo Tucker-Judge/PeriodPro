@@ -1,7 +1,6 @@
 //global values
 
 const divs = document.querySelectorAll(".drag-drop")
-const dragDrop = document.querySelector("h1")
 const categoryBtn = document.querySelector("#category-button")
 const listContainer = document.querySelector("#product-list")
 
@@ -95,43 +94,39 @@ divs.forEach(div =>{
 
     div.addEventListener("drop", (event) =>{
         event.preventDefault()
-            if(div.firstChild){
                 removeDetail(div)
                 renderDetail(div)
-            }
-            else{
-                renderDetail(div)
-            }
     })
 })
 
 function renderDetail(div){
-   
-    //create elements
-   const h1 = document.createElement("h1")
-   const img = document.createElement("img")
-   const h3 = document.createElement("h3")
-   const h4 = document.createElement("h4")
-   const btn = document.createElement("button")
-   const container = document.createElement("div")
-   container.setAttribute("id", "periodDetails")
+    const productName = div.querySelector("#product-name")
+    const productImg = div.querySelector("#product-image")
+    const productLevel = div.querySelector("#product-level")
+    const productDescription = div.querySelector("#product-description")
+    const productButton = div.querySelector("#product-button")
 
-   //innerText
-   
-   h1.innerText = productObj.name
-   img.src = productObj.image
-   h3.innerText = productObj.level
-   h4.innertext = productObj.description 
-   btn.innerText = productObj.price
-   btn.onClick = productObj.url
-
-   container.append(h1, img, h3, h4, btn)
-   div.append(container)
+    productName.innerText = productObj.name
+    productImg.src = productObj.image
+    productLevel.innerText = productObj.level
+    productDescription.innertext = productObj.description 
+    productButton.innerText = productObj.price
+    productButton.onClick = productObj.url
 }
 
 function removeDetail(div){
-    while(div.firstChild){
-        const periodDetails = document.getElementById("periodDetails")
-        // periodDetails.remove()
-    }
+    const productName = div.querySelector("#product-name")
+    const productImg = div.querySelector("#product-image")
+    const productLevel = div.querySelector("#product-level")
+    const productDescription = div.querySelector("#product-description")
+    const productButton = div.querySelector("#product-button")
+
+    productName.innerText = ""
+    productImg.src = ""
+    productLevel.innerText = ""
+    productDescription.innertext = ""
+    productButton.innerText = ""
+    productButton.onClick = ""
+    
+
 }
