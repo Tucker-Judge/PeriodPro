@@ -9,3 +9,11 @@ li.dragging{
 div.over{
     display:none
 }
+
+#drag-drop1.over {
+    color:gray;
+}
+
+#drag-drop2.over {
+    color:gray;
+}

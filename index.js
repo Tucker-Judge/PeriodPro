@@ -1,44 +1,29 @@
 //global values
 
-const div1 = document.querySelector("#drag-drop1")
-const div2 = document.querySelector("#drag-drop2")
+const divs = document.querySelectorAll(".drag-drop")
+const dragDrop = document.querySelector("h1")
 const categoryBtn = document.querySelector("#category-button")
 const listContainer = document.querySelector("#product-list")
 
-let category = false
+var category = false
 categoryBtn.innerText = "Single-Use"
+var productObj
 
 //onstart
 renderList(category)
 
-//dragover
-div1.addEventListener("dragover", ()=>{
-    gitdiv1.classLits.add("over")
-})
-
-div1.addEventListener("drop", ()=>{
-    fetch(`${}`)
-    .then(res => res.json())
-    .then(obj => renderDetail(1,obj))
-})
-
-div2.addEventListener("drop", ()=>{
-    fetch(`${}`)
-    .then(res => res.json())
-    .then(obj => renderDetail(2,obj))
-})
-
 categoryBtn.addEventListener("click", ()=>{
-    removeRender()
-    renderList()
-    if(category = false){
-        category = true
-        categoryBtn.innerText = "ReUsable"
-    }
-    else{
-        category = false
+    //switch boolean
+    category = !category
+
+    //change button name and render
+    if(category == false){
         categoryBtn.innerText = "Single-Use"
     }
+    else{
+        categoryBtn.innerText = "Reusable"
+    }
+    renderList()
 
 })
 
@@ -49,14 +34,14 @@ function renderList(){
     removeRender()
     
     //if for boolean
-    if(category = false){
+    if(category == false){
         //fetch
-        fetch(`${}`)
+        fetch(`http://localhost:3000/disposable-products`)
         .then(res => res.json())
         .then(array => render(array))
     }
     else{
-        fetch(`${}`)
+        fetch(`http://localhost:3000/reusable-products`)
         .then(res => res.json())
         .then(array => render(array))
     }
@@ -70,7 +55,7 @@ function render(array){
         li.setAttribute("id", "period-list")
 
         //inner text of list
-        li.innerText = obj.name + ", " + obj.product 
+        li.innerText = obj.name
 
         //append list to ul
         listContainer.append(li)
@@ -81,6 +66,7 @@ function render(array){
         //drag start listener
         li.addEventListener("dragstart", ()=>{
             li.classList.add("dragging")
+            productObj = obj
         })
 
         //drag stop listener
@@ -98,21 +84,54 @@ function removeRender(){
     }
 }
 
-function renderDetail(num, obj){
-   //create elements
+
+//Drag and Drop code
+
+divs.forEach(div =>{
+
+    div.addEventListener("dragover", (e)=>{
+        e.preventDefault()
+    })
+
+    div.addEventListener("drop", (event) =>{
+        event.preventDefault()
+            if(div.firstChild){
+                removeDetail(div)
+                renderDetail(div)
+            }
+            else{
+                renderDetail(div)
+            }
+    })
+})
+
+function renderDetail(div){
+   
+    //create elements
    const h1 = document.createElement("h1")
    const img = document.createElement("img")
-   const h3 = documetn.createElement("h3")
+   const h3 = document.createElement("h3")
    const h4 = document.createElement("h4")
    const btn = document.createElement("button")
+   const container = document.createElement("div")
+   container.setAttribute("id", "periodDetails")
 
    //innerText
-   h1.innerText = obj.name
-   img.src = obj.img
-   h3.innerText = obj.capacity
-   h4.innertext = obj.description 
-   btn.innerText = obj.price
-   btn.onClick = obj.link
+   
+   h1.innerText = productObj.name
+   img.src = productObj.image
+   h3.innerText = productObj.level
+   h4.innertext = productObj.description 
+   btn.innerText = productObj.price
+   btn.onClick = productObj.url
 
-   div+num.append(h1,img,h3,h4,btn)
+   container.append(h1, img, h3, h4, btn)
+   div.append(container)
+}
+
+function removeDetail(div){
+    while(div.firstChild){
+        const periodDetails = document.getElementById("periodDetails")
+        // periodDetails.remove()
+    }
 }
