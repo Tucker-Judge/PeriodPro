@@ -1,44 +1,28 @@
 //global values
 
-const div1 = document.querySelector("#drag-drop1")
-const div2 = document.querySelector("#drag-drop2")
+const divs = document.querySelectorAll(".drag-drop")
 const categoryBtn = document.querySelector("#category-button")
 const listContainer = document.querySelector("#product-list")
 
-let category = false
+var category = false
 categoryBtn.innerText = "Single-Use"
+var productObj
 
 //onstart
 renderList(category)
 
-//dragover
-div1.addEventListener("dragover", ()=>{
-    gitdiv1.classLits.add("over")
-})
-
-div1.addEventListener("drop", ()=>{
-    fetch(`${}`)
-    .then(res => res.json())
-    .then(obj => renderDetail(1,obj))
-})
-
-div2.addEventListener("drop", ()=>{
-    fetch(`${}`)
-    .then(res => res.json())
-    .then(obj => renderDetail(2,obj))
-})
-
 categoryBtn.addEventListener("click", ()=>{
-    removeRender()
-    renderList()
-    if(category = false){
-        category = true
-        categoryBtn.innerText = "ReUsable"
-    }
-    else{
-        category = false
+    //switch boolean
+    category = !category
+
+    //change button name and render
+    if(category == false){
         categoryBtn.innerText = "Single-Use"
     }
+    else{
+        categoryBtn.innerText = "Reusable"
+    }
+    renderList()
 
 })
 
@@ -49,14 +33,14 @@ function renderList(){
     removeRender()
     
     //if for boolean
-    if(category = false){
+    if(category == false){
         //fetch
-        fetch(`${}`)
+        fetch(`http://localhost:3000/disposable-products`)
         .then(res => res.json())
         .then(array => render(array))
     }
     else{
-        fetch(`${}`)
+        fetch(`http://localhost:3000/reusable-products`)
         .then(res => res.json())
         .then(array => render(array))
     }
@@ -70,7 +54,7 @@ function render(array){
         li.setAttribute("id", "period-list")
 
         //inner text of list
-        li.innerText = obj.name + ", " + obj.product 
+        li.innerText = obj.name
 
         //append list to ul
         listContainer.append(li)
@@ -81,6 +65,7 @@ function render(array){
         //drag start listener
         li.addEventListener("dragstart", ()=>{
             li.classList.add("dragging")
+            productObj = obj
         })
 
         //drag stop listener
@@ -98,21 +83,50 @@ function removeRender(){
     }
 }
 
-function renderDetail(num, obj){
-   //create elements
-   const h1 = document.createElement("h1")
-   const img = document.createElement("img")
-   const h3 = documetn.createElement("h3")
-   const h4 = document.createElement("h4")
-   const btn = document.createElement("button")
 
-   //innerText
-   h1.innerText = obj.name
-   img.src = obj.img
-   h3.innerText = obj.capacity
-   h4.innertext = obj.description 
-   btn.innerText = obj.price
-   btn.onClick = obj.link
+//Drag and Drop code
 
-   div+num.append(h1,img,h3,h4,btn)
+divs.forEach(div =>{
+
+    div.addEventListener("dragover", (e)=>{
+        e.preventDefault()
+    })
+
+    div.addEventListener("drop", (event) =>{
+        event.preventDefault()
+                removeDetail(div)
+                renderDetail(div)
+    })
+})
+
+function renderDetail(div){
+    const productName = div.querySelector("#product-name")
+    const productImg = div.querySelector("#product-image")
+    const productLevel = div.querySelector("#product-level")
+    const productDescription = div.querySelector("#product-description")
+    const productButton = div.querySelector("#product-button")
+
+    productName.innerText = productObj.name
+    productImg.src = productObj.image
+    productLevel.innerText = productObj.level
+    productDescription.innertext = productObj.description 
+    productButton.innerText = productObj.price
+    productButton.onClick = productObj.url
+}
+
+function removeDetail(div){
+    const productName = div.querySelector("#product-name")
+    const productImg = div.querySelector("#product-image")
+    const productLevel = div.querySelector("#product-level")
+    const productDescription = div.querySelector("#product-description")
+    const productButton = div.querySelector("#product-button")
+
+    productName.innerText = ""
+    productImg.src = ""
+    productLevel.innerText = ""
+    productDescription.innertext = ""
+    productButton.innerText = ""
+    productButton.onClick = ""
+    
+
 }
