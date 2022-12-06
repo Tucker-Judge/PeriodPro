@@ -1,5 +1,4 @@
 //global values
-
 const divs = document.querySelectorAll(".drag-drop")
 const categoryBtn = document.querySelector("#category-button")
 const listContainer = document.querySelector("#product-list")
@@ -27,7 +26,6 @@ categoryBtn.addEventListener("click", ()=>{
 })
 
 //functions 
-
 function renderList(){
     
     removeRender()
@@ -83,9 +81,7 @@ function removeRender(){
     }
 }
 
-
 //Drag and Drop code
-
 divs.forEach(div =>{
 
     div.addEventListener("dragover", (e)=>{

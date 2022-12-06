@@ -17,3 +17,17 @@ div.over{
 #drag-drop2.over {
     color:gray;
 }
+
+img{
+    width: 50px;
+    position: absolute;
+    left: 50%;
+}
+
+.drag-drop{
+    display: table;
+}
+
+h1{
+    text-size-adjust: 50%;
+}
