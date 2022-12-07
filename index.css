@@ -1,3 +1,8 @@
+
+body{
+    font-family: sans-serif;
+}
+
 #period-list {
     cursor: move;
     padding: 1rem;
@@ -121,11 +126,7 @@ button {
     float:left;
     position: relative;
     margin-right: 37.5%;
-    
-    margin: auto; 
-    float:left;
-    position: relative;
-    margin-right: 37.5%;
+    margin-top: 50px;
     
 }
 
