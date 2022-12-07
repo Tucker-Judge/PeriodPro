@@ -48,7 +48,7 @@ function render(array){
     array.forEach((obj)=>{
             
         //create list element
-        const li = document.createElement("div")
+        const li = document.createElement("li")
         li.setAttribute("id", "period-list")
 
         //inner text of list
@@ -123,6 +123,4 @@ function removeDetail(div){
     productDescription.innertext = ""
     productButton.innerText = ""
     productButton.onClick = ""
-    
-
 }
