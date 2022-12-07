@@ -1,3 +1,8 @@
+
+body{
+    font-family: sans-serif;
+}
+
 #period-list {
     cursor: move;
     padding: 1rem;
@@ -5,14 +10,16 @@
     border: 1px solid #B8324F;
     color: white;
     position: relative;
-    width: 50%;
+    width: 70%;
     border-radius: 12px;
 }
 
 #product-list{
-    align-self:center;
+    align-content:center;
     display: flex;
     flex-direction:column;
+    margin-left: 15%;
+    margin-right: auto;
 }
 
 li.dragging{
@@ -108,25 +115,19 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 4px 12px;
     cursor: pointer;
     border-radius: 12px
 }
 
 #detail-desc{
-    width: 25%;
-    width: 25%;
-    text-align:center;
+    text-align:left;
     margin: auto; 
     float:left;
     position: relative;
     margin-right: 37.5%;
-    
-    margin: auto; 
-    float:left;
-    position: relative;
-    margin-right: 37.5%;
-    
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 #detail-image{
@@ -136,32 +137,24 @@ button {
     position: relative;
     width:25%;
     border: 1px solid #B8324F;
-    margin:auto;
-    float: left;
     position: relative;
     width:25%;
     border: 1px solid #B8324F;
 }
 
 #detail-name{
-    margin: auto; 
-    text-align: center;
-    position: absolute;
-    align-items: center;
-    text-align:center;
-    margin: center;
-    left:45%;
-    margin: auto; 
-    text-align: center;
-    position: absolute;
-    align-items: center;
-    text-align:center;
-    margin: center;
+    margin-left: 20px;
+    align-self: flex-start; 
+    text-align: left;
     left:45%;
     margin-top:20px;
 
 }
 
 .detail-box{
-    text-align: center;
+    align-content: center;
+    margin-left: 30%;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

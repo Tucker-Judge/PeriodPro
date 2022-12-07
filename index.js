@@ -111,7 +111,7 @@ function renderDetail(div){
     productDescription.innerText = productObj.description 
     productButton.innerText = productObj.price
     productButton.onClick = productObj.url
-    productFlow.innerText = "Best for " + productObj.flow + " flow"
+    productFlow.innerText = "Best for " + productObj.flow + " Flow"
     productDuration.innerText = "Duration of Wear: " + productObj.duration
     productMaterial.innerText = "Made From: " + productObj.material
 }   
