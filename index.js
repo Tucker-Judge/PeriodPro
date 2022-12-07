@@ -101,14 +101,20 @@ function renderDetail(div){
     const productLevel = div.querySelector("#product-level")
     const productDescription = div.querySelector("#product-description")
     const productButton = div.querySelector("#product-button")
+    const productFlow = div.querySelector("#product-flow")
+    const productDuration = div.querySelector("#product-duration")
+    const productMaterial = div.querySelector("#product-material")
 
     productName.innerText = productObj.name
     productImg.src = productObj.image
     productLevel.innerText = productObj.level
-    productDescription.innertext = productObj.description 
+    productDescription.innerText = productObj.description 
     productButton.innerText = productObj.price
     productButton.onClick = productObj.url
-}
+    productFlow.innerText = "Best for " + productObj.flow + " flow"
+    productDuration.innerText = "Duration of Wear: " + productObj.duration
+    productMaterial.innerText = "Made From: " + productObj.material
+}   
 
 function removeDetail(div){
     const productName = div.querySelector("#product-name")
@@ -116,6 +122,9 @@ function removeDetail(div){
     const productLevel = div.querySelector("#product-level")
     const productDescription = div.querySelector("#product-description")
     const productButton = div.querySelector("#product-button")
+    const productFlow = div.querySelector("#product-flow")
+    const productDuration = div.querySelector("#product-duration")
+    const productMaterial = div.querySelector("#product-material")
 
     productName.innerText = ""
     productImg.src = ""
@@ -123,4 +132,7 @@ function removeDetail(div){
     productDescription.innertext = ""
     productButton.innerText = ""
     productButton.onClick = ""
+    productFlow.innerText = ""
+    productDuration.innerText = ""
+    productMaterial.innerText = ""
 }
