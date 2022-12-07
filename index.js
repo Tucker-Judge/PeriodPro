@@ -48,7 +48,7 @@ function render(array){
     array.forEach((obj)=>{
             
         //create list element
-        const li = document.createElement("li")
+        const li = document.createElement("div")
         li.setAttribute("id", "period-list")
 
         //inner text of list
